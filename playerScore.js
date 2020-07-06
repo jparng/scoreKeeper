@@ -40,9 +40,14 @@ reset.addEventListener("click", function(){
 });
 
 numInput.addEventListener("change", function(){
+    if(this.value > 0){
     winningDisplay.textContent = this.value;
     win = Number(this.value);
     resetting();
+     }else{
+        alert("Please input a positive number greater than 0!");
+        resetting();
+    }
 });
 
 function resetting(){
